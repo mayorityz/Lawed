@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 var DB_POOL = process.env.NODE_ENV
   ? process.env.REMOTE_DB
   : process.env.LOCAL_DB;
-
+// trying out the db connection here!
 let connection;
 
 try {
