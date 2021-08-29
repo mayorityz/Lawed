@@ -14,3 +14,12 @@ export const createCase = async (req, res) => {
     }
   );
 };
+
+export const allCases = async (req, res) => {
+  // return top 8 - 14 cases
+  let database = new Orm({}, Case);
+  await database.Read((response) => {
+    console.log(response);
+    res.send(response);
+  });
+};

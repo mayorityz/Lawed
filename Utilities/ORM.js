@@ -27,11 +27,7 @@ export default class Orm {
       let query = await this.model.find({ ...this.data }, (err, data) => {
         if (err) {
           cb({ status: false, message: err.message });
-        } else {
-          if (data.length > 0)
-            cb({ status: true, message: "match found", data });
-          else cb({ status: false, message: "invalid Credenials" });
-        }
+        } else cb({ status: true, message: "success!", data });
       });
     } catch (error) {
       return error.message;

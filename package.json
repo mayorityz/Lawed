@@ -6,7 +6,7 @@
   "license": "MIT",
   "engines": {
     "node": "14.15.1",
-    "yarn": "1.22.10"
+    "yarn": "1.22.11"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
