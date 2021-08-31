@@ -14,12 +14,12 @@ let ORIGIN = process.env.NODE_ENV
   ? "http://lawyeredup.surge.sh"
   : "http://localhost:3000";
 
-app.use(cors({ origin: "http://lawyeredup.surge.sh", credentials: true }));
+app.use(cors({ origin: ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://lawyeredup.surge.sh");
+  res.setHeader("Access-Control-Allow-Origin", ORIGIN);
   res.setHeader("Access-Control-Allow-Methods", "*");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
