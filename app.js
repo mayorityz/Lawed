@@ -14,6 +14,8 @@ let ORIGIN = process.env.NODE_ENV
   ? "http://lawyeredup.surge.sh"
   : "http://localhost:3000";
 
+console.log(ORIGIN);
+
 app.use(cors({ origin: ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
